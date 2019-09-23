@@ -1,16 +1,16 @@
 <div>
     <div class="card" style="width: 18rem;">
-        <img src=".\assets\prod1.png" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-            <a href="#" class="btn btn-primary" style="background-color: #ef9114;border-color: #cca406;">
-                <img src=".\assets\shopping-cart1.svg" height="20px" width="20px"
-                style="margin-right:10px">Add to cart</a>
+        <img [src]="product.imageUrl" class="card-img-top" [alt]="product.alternative">
+        <div class="card-body" style="margin-top: 10px;">
+            <h5 class="card-title">{{product.title | uppercase}}</h5>
+            <p class="card-text">{{product.description}}</p>
+            <a href="#" *ngIf="product.isAvailable" class="btn btn-primary" (click)="addToCart()"
+                style="background-color: #ef9114;border-color: #cca406;">
+                <img src=".\assets\shopping-cart.svg" height="20px" width="20px" style="margin-right:10px">Add to
+                cart</a>
             <a href="#" class="btn btn-primary" style="float: right; background-color: #fdbb00;
             border-color: #cca406;"><img src=".\assets\buy-button.svg" height="20px" width="20px"
-                style="margin-right:10px">Buy</a>
+                    style="margin-right:10px">View</a>
         </div>
     </div>
 </div>

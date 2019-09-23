@@ -2,9 +2,8 @@
 <app-header></app-header>
 <div class="container wrapper" style="padding-top: 100px;">
   <div class="row">
-    <app-product class="col-4 d-flex align-items-stretch"></app-product>
-    <app-product class="col-4 d-flex align-items-stretch"></app-product>
-    <app-product class="col-4 d-flex align-items-stretch"></app-product>
+    <app-product *ngFor="let product of products" class="col-4 d-flex align-items-stretch" [product]="product"></app-product>
   </div>
 </div>
+<!-- <p>{{products|json}}</p> -->
 <app-footer></app-footer>
