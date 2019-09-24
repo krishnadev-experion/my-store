@@ -8,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   constructor() { }
+  searchTerm = '' ;
 
   ngOnInit() {
   }
-
+  pushMessage($event){
+    console.log($event);
+    this.searchTerm = $event;
+  }
 }

@@ -3,21 +3,21 @@ import { Injectable } from '@angular/core';
 import { Product } from '../models/Product';
 import { HttpClient } from '@angular/common/http';
 import { $ } from 'protractor';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
-  private baseUrl = 'http://localhost:3000/' ;
   constructor(
     private httpClient: HttpClient
   ) {
 
   }
   getProducts() {
-    return this.httpClient.get(`${this.baseUrl}product`);
+    return this.httpClient.get(`${environment.baseUrl}product`);
   }
   getProduct(productId) {
-    return this.httpClient.get(`${this.baseUrl}product/${productId}`);
+    return this.httpClient.get(`${environment.baseUrl}product/${productId}`);
   }
   }
