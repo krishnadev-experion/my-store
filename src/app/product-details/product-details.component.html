@@ -1,0 +1,16 @@
+<div>
+    <div class="card" style="width: 18rem;">
+        <img [src]="product ? product.imageUrl: ''" class="card-img-top" [alt]="product ? product.alternative: ''">
+        <div class="card-body" style="margin-top: 10px;">
+            <h5 class="card-title">{{product ? product.title: '' | uppercase }}</h5>
+            <p class="card-text">{{product ? product.description: ''}}</p>
+            <a routerLink="" *ngIf="product ? product.isAvailable: ''" class="btn btn-primary" (click)="addToCart()"
+                style="background-color: #ef9114;border-color: #cca406;">
+                <img src=".\assets\shopping-cart.svg" height="20px" width="20px" style="margin-right:10px">Add to
+                cart</a>
+            <a routerLink="checkout" class="btn btn-primary" style="float: right; background-color: #fdbb00;
+            border-color: #cca406;"><img src=".\assets\buy-button.svg" height="20px" width="20px"
+                    style="margin-right:10px">Buy</a>
+        </div>
+    </div>
+</div>

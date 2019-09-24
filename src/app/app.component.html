@@ -1,9 +1,7 @@
 <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
 <app-header></app-header>
 <div class="container wrapper" style="padding-top: 100px;">
-  <div class="row">
-    <app-product *ngFor="let product of products" class="col-4 d-flex align-items-stretch" [product]="product"></app-product>
-  </div>
+  <router-outlet></router-outlet>
 </div>
 <!-- <p>{{products|json}}</p> -->
 <app-footer></app-footer>
